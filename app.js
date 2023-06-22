@@ -9,7 +9,7 @@ const displayProducts = () => {
     .map((produit) => {
       const { id, title, compagny, image, price } = produit;
       return `<article class="product">
-          <img class ="product-img" src= ${image}/>
+          <img class="product-img img" alt="" src="${image}"/>
           <footer>
             <h5 product-name="nom">${title}</h5>
             <span product-price="prix">${price} </span>
@@ -51,7 +51,7 @@ displayButtons();
 
 companiesHtml.addEventListener('click', (event) => {
   const element = event.target;
-  console.log(element.dataset);
+
   if (element.classList.contains('company-btn')) {
     if (element.dataset.id === 'all') {
       console.log('dans le all');
